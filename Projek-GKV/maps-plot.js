@@ -25,14 +25,15 @@ var data = [{
             11.49],
         cmin: 0,
         cmax: 20,
-        colorscale: 'Greens',
+        colorscale: 'Blues',
         colorbar: {
             title: 'Besar Nilai Rata-rata Mata Uang',
             ticksuffix: '%',
             showticksuffix: true,
         },
         line: {
-            color: 'black'
+            color: 'black',
+            width: 1
         }
     },
     name: 'Rata-rata Nilai Tukar Mata Uang Dunia pada Tahun 2022'
@@ -44,6 +45,12 @@ var layout = {
         'resolution': 100
     },
     height: 700,
+    //blue paper bg color
+    paper_bgcolor: '#204094',
+    font: {
+        color: 'white'
+    },
+
 };
 
 var config = { responsive: true };

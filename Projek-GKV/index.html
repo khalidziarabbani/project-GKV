@@ -1,140 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <style>
-        body{
-            margin-left: 120px;
-            margin-right: 120px;
-            background-color: rgb(247, 193, 193);
-            
-        }
-        h2, h1{
-            text-align: center;
-        }
-        h2{
-            font-size: 25px;
-        }
-        p {
-            font-size: 20px;
-        }
 
-        .country-name{
-            display:grid;
-            /* Mak it 6 column */
-            grid-template-columns: repeat(6, 1fr);
-            grid-gap: 20px;
-            margin-top: 20px;
-        }
+      h2,
+      h1 {
+        text-align: center;
+        color: #fff;
+      }
+      
+      h2 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 20px;
+        color: #fff;
+      }
 
-        .country-plot {
-            display: none;
+      .country-name {
+        display: grid;
+        /* Mak it 6 column */
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+        margin-top: 20px;
+      }
 
-        }
+      .country-plot {
+        display: none;
+      }
     </style>
     <title>GKV</title>
-</head>
-<body>
-    <h1>Rata-rata Nilai Tukar Mata Uang Dunia pada Tahun 2022</h1>
+  </head>
+  <body>
+
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <h1 class="title">Rata-rata Nilai Tukar Mata Uang Dunia pada Tahun 2022</h1>
     <p>*) terhadap IDR</p>
     <div id="maps-plot"></div>
 
     <div class="country-name">
-        <button class="currency"  data-country="USD"><h1>USD</h1></button>
-        <button class="currency" data-country="CHF"><h1>CHF</h1></button>
-        <button class="currency"  data-country="SGD"><h1>SGD</h1></button>
-        <button class="currency"  data-country="MYR"><h1>MYR</h1></button>
-        <button class="currency"  data-country="AUD"><h1>AUD</h1></button>
-        <button class="currency"  data-country="CAD"><h1>CAD</h1></button>
+      <button class="currency" data-country="USD"><h1>USD</h1></button>
+      <button class="currency" data-country="CHF"><h1>CHF</h1></button>
+      <button class="currency" data-country="SGD"><h1>SGD</h1></button>
+      <button class="currency" data-country="MYR"><h1>MYR</h1></button>
+      <button class="currency" data-country="AUD"><h1>AUD</h1></button>
+      <button class="currency" data-country="CAD"><h1>CAD</h1></button>
     </div>
-    
-    
+
     <div class="country-plot" id="USD">
-        <h1>USD</h1>
-        <h2>Bar Plot</h2>
-        <div id="barplot-USD"></div>
-        <h2>Line Scatter</h2>
-        <div id="line-scatter-USD"></div>
-        <h2>Bubble Plot</h2>
-        <div id="bubble-plot-USD"></div>
+      <div class="box">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <h1>USD</h1>
+      <h2>Bar Plot</h2>
+      <div id="barplot-USD"></div>
+      <h2>Line Scatter</h2>
+      <div id="line-scatter-USD"></div>
+      <h2>Bubble Plot</h2>
+      <div id="bubble-plot-USD"></div>
     </div>
-  
-    
+
     <div class="country-plot" id="CHF">
-        <h1>CHF</h1>
-        <h2>Bar Plot</h2>
-        <div id="barplot-CHF"></div>
-        <h2>Line Scatter</h2>
-        <div id="line-scatter-CHF"></div>
-        <h2>Bubble Plot</h2>
-        <div id="bubble-plot-CHF"></div>
+      <div class="box">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <h1>CHF</h1>
+      <h2>Bar Plot</h2>
+      <div id="barplot-CHF"></div>
+      <h2>Line Scatter</h2>
+      <div id="line-scatter-CHF"></div>
+      <h2>Bubble Plot</h2>
+      <div id="bubble-plot-CHF"></div>
     </div>
 
-    
     <div class="country-plot" id="SGD">
-        <h1>SGD</h1>
-        <h2>Bar Plot</h2>
-        <div id="barplot-SGD"></div>
-        <h2>Line Scatter</h2>
-        <div id="line-scatter-SGD"></div>
-        <h2>Bubble Plot</h2>
-        <div id="bubble-plot-SGD"></div>
+      <div class="box">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <h1>SGD</h1>
+      <h2>Bar Plot</h2>
+      <div id="barplot-SGD"></div>
+      <h2>Line Scatter</h2>
+      <div id="line-scatter-SGD"></div>
+      <h2>Bubble Plot</h2>
+      <div id="bubble-plot-SGD"></div>
     </div>
 
-
-    
-    <div class="country-plot"  id="MYR">
-        <h1>MYR</h1>
-        <h2>Bar Plot</h2>
-        <div id="barplot-MYR"></div>
-        <h2>Line Scatter</h2>
-        <div id="line-scatter-MYR"></div>
-        <h2>Bubble Plot</h2>
-        <div id="bubble-plot-MYR"></div>
+    <div class="country-plot" id="MYR">
+      <div class="box">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <h1>MYR</h1>
+      <h2>Bar Plot</h2>
+      <div id="barplot-MYR"></div>
+      <h2>Line Scatter</h2>
+      <div id="line-scatter-MYR"></div>
+      <h2>Bubble Plot</h2>
+      <div id="bubble-plot-MYR"></div>
     </div>
 
-    
     <div class="country-plot" id="AUD">
-        <h1>AUD</h1>
-        <h2>Bar Plot</h2>
-        <div id="barplot-AUD"></div>
-        <h2>Line Scatter</h2>
-        <div id="line-scatter-AUD"></div>
-        <h2>Bubble Plot</h2>
-        <div id="bubble-plot-AUD"></div>
+      <div class="box">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <h1>AUD</h1>
+      <h2>Bar Plot</h2>
+      <div id="barplot-AUD"></div>
+      <h2>Line Scatter</h2>
+      <div id="line-scatter-AUD"></div>
+      <h2>Bubble Plot</h2>
+      <div id="bubble-plot-AUD"></div>
     </div>
-    
-    
-    <div class="country-plot" id="CAD">
-        <h1>CAD</h1>
-        <h2>Bar Plot</h2>
-        <div id="barplot-CAD"></div>
-        <h2>Line Scatter</h2>
-        <div id="line-scatter-CAD"></div>
-        <h2>Bubble Plot</h2>
-        <div id="bubble-plot-CAD"></div>
-    </div>
-    
-    <script>
-        const buttons = document.querySelectorAll('.currency');
-        const plots = document.querySelectorAll('.country-plot');
 
-        buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const country = button.dataset.country;
-            const plot = document.querySelector(`#${country}`);
-            plots.forEach((p) => {
-            p.style.display = 'none';
-            });
-            plot.style.display = 'block';
+    <div class="country-plot" id="CAD">
+      <div class="box">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <h1>CAD</h1>
+      <h2>Bar Plot</h2>
+      <div id="barplot-CAD"></div>
+      <h2>Line Scatter</h2>
+      <div id="line-scatter-CAD"></div>
+      <h2>Bubble Plot</h2>
+      <div id="bubble-plot-CAD"></div>
+    </div>
+    <script>
+      const buttons = document.querySelectorAll(".currency");
+      const plots = document.querySelectorAll(".country-plot");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const country = button.dataset.country;
+          const plot = document.querySelector(`#${country}`);
+          plots.forEach((p) => {
+            p.style.display = "none";
+          });
+          plot.style.display = "block";
         });
-        });
+      });
     </script>
-    
 
     <script src="js-plot/USD/barplot-USD.js"></script>
     <script src="js-plot/USD/line-scatter-USD.js"></script>
@@ -161,6 +183,5 @@
     <script src="js-plot/CAD/bubble-plot-CAD.js"></script>
 
     <script src="maps-plot.js"></script>
-
-</body>
+  </body>
 </html>
