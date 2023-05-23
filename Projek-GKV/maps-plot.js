@@ -34,15 +34,23 @@ var data = [{
         line: {
             color: 'black',
             width: 1
-        }
+        },
     },
-    name: 'Rata-rata Nilai Tukar Mata Uang Dunia pada Tahun 2022'
+    name: 'Rata-rata Nilai Tukar Mata Uang Dunia pada Tahun 2022',
+    //
+
+
 }];
 
 var layout = {
     'geo': {
         'scope': 'world',
-        'resolution': 100
+        'resolution': 100,
+        'showland': true,
+        'landcolor': '#C8F7C5',
+        'showocean': true,
+        'oceancolor': '#A9E2F3',
+        'showcountries': true,
     },
     height: 700,
     //blue paper bg color
@@ -50,7 +58,7 @@ var layout = {
     font: {
         color: 'white'
     },
-
+    dragmode: false,
 };
 
 var config = { responsive: true };

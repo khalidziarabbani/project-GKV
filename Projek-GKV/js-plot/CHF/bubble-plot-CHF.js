@@ -22,8 +22,8 @@ var data = [
                 16968,],
         mode: 'markers',
         marker: {
-            color: ['red', 'blue', 'green', 'yellow', 'black', 'orange', 'purple', 'pink', 'brown', 'cyan', 'magenta', 'grey'],
-            size: Array.from({ length: 12 }, () => getRandomSize(150)),
+            color: Array.from({ length: 12 }, () => '#1f77b4'),
+            size : Array.from({ length: 12 }, () => 20),
         },
     },
 ];
