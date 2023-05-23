@@ -34,6 +34,12 @@
       .country-plot {
         display: none;
       }
+
+      .currency.active {
+  background-color: #2bac61; /* Update with the desired color */
+  color: #ffffff; /* Update with the desired color */
+}
+
     </style>
     <title>GKV</title>
   </head>
@@ -143,19 +149,27 @@
       <div id="bubble-plot-CAD"></div>
     </div>
     <script>
-      const buttons = document.querySelectorAll(".currency");
-      const plots = document.querySelectorAll(".country-plot");
+     const buttons = document.querySelectorAll(".currency");
+const plots = document.querySelectorAll(".country-plot");
 
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const country = button.dataset.country;
-          const plot = document.querySelector(`#${country}`);
-          plots.forEach((p) => {
-            p.style.display = "none";
-          });
-          plot.style.display = "block";
-        });
-      });
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const country = button.dataset.country;
+    const plot = document.querySelector(`#${country}`);
+    
+    plots.forEach((p) => {
+      p.style.display = "none";
+    });
+    
+    buttons.forEach((b) => {
+      b.classList.remove("active");
+    });
+    
+    plot.style.display = "block";
+    button.classList.add("active");
+  });
+});
+
     </script>
 
     <script src="js-plot/USD/barplot-USD.js"></script>
