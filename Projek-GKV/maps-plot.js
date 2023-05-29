@@ -15,16 +15,16 @@ var data = [{
     marker: {
         size: 20,
         color: [
-            14.91, 
-            18.64, 
-            16.96, 
+            14916.75, 
+            13333.5, 
+            9939.917, 
             // 11.65, 
-            3.556, 
+            2872.417, 
             // 2.01, 
-            10.58, 
-            11.49],
+            9550.75, 
+            11427.67],
         cmin: 0,
-        cmax: 20,
+        cmax: 101,
         colorscale: 'Blues',
         colorbar: {
             title: 'Besar Nilai Rata-rata Mata Uang',
