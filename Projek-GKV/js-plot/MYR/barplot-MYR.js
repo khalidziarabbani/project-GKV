@@ -31,6 +31,13 @@ var data = [
         type: 'bar',
     },
 ];
-var layout = { font: { size: 18 } };
+var layout = { 
+    font: { size: 18 },
+    xaxis: { title: "Months" },
+    yaxis: { title: "Values in Rupiah" },
+    font:{
+        family: 'Raleway, sans-serif'
+    },
+};
 var config = { responsive: true };
 Plotly.newPlot(BAR, data, layout, config);
